@@ -1,0 +1,9 @@
+zig-out/
+.zig-cache/
+.direnv/
+
+store/
+
+# Local sandbox settings (created from src/sandbox_template.zon) and Bloom output.
+sandbox.zon
+bloom/loadout.json

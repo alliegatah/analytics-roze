@@ -1,0 +1,25 @@
+// Roze sandbox: weapon refine (R) and psyche (P) levels.
+//
+// Roze reads this file again at every login: edit it, then log out and back in.
+// Nothing here is saved to your account, so any value can be changed back.
+// If the file is missing, Roze writes this template; if it is invalid, the
+// server log says where and the defaults below are used.
+.{
+    .defaults = .{
+        // Weapon refine by rarity (S = 5 star, A = 4 star, B = 3 star). Range 1..5.
+        .weapon_refine = .{ .s = 1, .a = 5, .b = 5 },
+        // Psyche by character rarity (S = 5 star, A = 4 star). Range 0..6.
+        .psyche = .{ .s = 0, .a = 6 },
+    },
+
+    // Per-character psyche. Ids: 1001/1002 Detective, 1003 Firtho, 1004 Alf,
+    // 1005 Grimm, 1006 Lorin, 1007 Argos, 1008 Bentham, 1009 Captain Kaboom,
+    // 1016 Gucia, 1501 Ashley, 1502 Gratia, 1503 Rex, 1504 Red Rose, 1505 Cynthia II.
+    // Example: .characters = .{ .{ .id = 1504, .psyche = 2 }, .{ .id = 1501, .psyche = 6 } },
+    .characters = .{},
+
+    // Per-weapon refine. Weapon ids are 120<rarity><class><n>: 1205xxxx are S rank,
+    // e.g. 12051001. The full list is in assets/tables/s_motivetable.zon.
+    // Example: .weapons = .{ .{ .id = 12051001, .refine = 3 } },
+    .weapons = .{},
+}
